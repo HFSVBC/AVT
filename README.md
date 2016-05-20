@@ -1,5 +1,10 @@
 # AVT - Allele Validation Tool (AVT) for whole genome Multilocus Sequence Typing (wgMLST) schemas
 AVT (Allele Validation Tool), is a tool capable of validate novel alleles found in de novo assemblers by allele calling algorithms.
+The script needs four / five inputs. A txt file with all the inf and references (exemple:
+exemple/AlleleCallresults.txt). A second txt file with the nodes and it's refrences
+(exemple: exemple/ContigLocation.txt). A third file with the sequence (exemple:
+exemple/10_S10_L001.fasta). And the read(s). The output will be a txt file with
+the alleles that have not passed the validation.
 
 AVT's website: http://hfsvbc.github.io/AVT/
 
@@ -35,7 +40,6 @@ python AVT.py -h
 ###Team
 Hugo Curado(1), Margarida Cândido(1), Mickael Silva(2), João André Carriço(2) e Francisco M. Couto(1)
 
-(1) LaSIGE, Departamento de Informática, Faculdade de Ciências, Universidade de Lisboa, Lisboa, Portugal 
+(1) LaSIGE, Departamento de Informática, Faculdade de Ciências, Universidade de Lisboa, Lisboa, Portugal
 
 (2) Instituto de Microbiologia, Instituto de Medicina Molecular, Faculdade de Medicina, Universidade de Lisboa, Lisboa, Portugal
-

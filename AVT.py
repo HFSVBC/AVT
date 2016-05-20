@@ -96,7 +96,7 @@ def avtPrintBadAlleles(badAlelles, lines, output):
 
 def avtVCFanalyses(threshold, output):
 	"""
-	This function reads the vcf file and separates the data based on QUAL values and 
+	This function reads the vcf file and separates the data based on QUAL values and
 	a threshold
 
 	Requires: a threshold, float, between 0 and 1
@@ -109,7 +109,7 @@ def avtVCFanalyses(threshold, output):
 	badAlelles = avtVCFfilterBadAlleles(data, threshold)
 
 	avtPrintBadAlleles(badAlelles, data, output)
-	
+
 #----------------AVT's Main Core function----------------
 def avtMAIN(AlleleCallresults, ContigLocation, RefFasta, Reads1, Reads2, threshold, output, delete):
 	"""
@@ -124,7 +124,7 @@ def avtMAIN(AlleleCallresults, ContigLocation, RefFasta, Reads1, Reads2, thresho
 		os.mkdir('genData')
 	else:
 		for File in os.listdir('genData'):
-			os.remove(os.path.join('genData', File)) 
+			os.remove(os.path.join('genData', File))
 	#--------------DATA PREP
 	AVTpm.avtFiltration(AlleleCallresults, ContigLocation, RefFasta)
 	AVTpm.avtBWAmap(Reads1, Reads2)
@@ -145,11 +145,11 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser(description = "Allele Validation Tool (AVT) - \
 		Script capable of separating the alleles to validate from DNA sequence in fasta\
 		file (exemple: exemple/10_S10_L001.fasta).\
-		The script needs three inputs. A txt file with all the inf and references (exemple:\
+		The script needs four / five inputs. A txt file with all the inf and references (exemple:\
 		exemple/AlleleCallresults.txt). A second txt file with the nodes and it's refrences\
-		(exemple: exemple/ContigLocation.txt). And a third file with the sequence (exemple:\
-		exemple/10_S10_L001.fasta). The output will be a fasta file with the bits of sequence\
-		to analyse with the appropriate threshold.")
+		(exemple: exemple/ContigLocation.txt). A third file with the sequence (exemple:\
+		exemple/10_S10_L001.fasta). And the read(s). The output will be a txt file with\
+		the alleles that have not passed the validation.")
     #INPUT FILES
     #Allele_Call_results
     parser.add_argument('Allele_Call_results', metavar = 'AlleleCallresults.txt',
@@ -184,4 +184,3 @@ if __name__ == '__main__':
     arguments = parser.parse_args()
     avtMAIN(arguments.Allele_Call_results, arguments.Contig_Location, arguments.In_Sequence, arguments.First_Read,\
     	arguments.Second_Read, arguments.threshold, arguments.output, arguments.delete)
-
