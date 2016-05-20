@@ -3,6 +3,8 @@ AVT (Allele Validation Tool), is a tool capable of validate novel alleles found 
 
 The tool needs four / five inputs. A txt file with all the inf and references (example: example/AlleleCallresults.txt). A second txt file with the nodes and it's refrences (example: example/ContigLocation.txt). A third file with the sequence (example: example/10_S10_L001.fasta). And the read(s) (example: example/10_S10_L001_R1_001/ and example/10_S10_L001_R2_001/). The output will be a txt file with the alleles that have not passed the validation.
 
+AVT's website: http://hfsvbc.github.io/AVT/
+
 **Example**
 ```
 python AVT.py AlleleCallresults.txt ContigLocation.txt 10_S10_L001.fasta 10_S10_L001_R1_001.fastq -R2 10_S10_L001_R2_001.fastq -d True
@@ -22,8 +24,6 @@ gi_384129960_ref_NC_017162.1_:c35008-33635.fasta	697	.	A	C	3.15573117368e-21
 gi_407930685_ref_NC_018706.1_:c230209-229088.fasta	1409	.	C	T	3.15573117368e-21
 gi_384141246_ref_NC_017171.1_:95696-96739.fasta	1297	.	G	A	3.15573117368e-21
 ```
-
-AVT's website: http://hfsvbc.github.io/AVT/
 
 ###Install
 Simply downaload a [zip of the repository](https://github.com/HFSVBC/AVT/archive/master.zip) and install all of AVT's <a name="SR"></a>dependencies.
