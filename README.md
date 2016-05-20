@@ -37,9 +37,12 @@ python AVT.py -h
 - [SAMTOOLS](http://samtools.sourceforge.net) installed in the /usr/local/bin directory
 - [BCFTOOLS](http://www.htslib.org/download/) installed in the /usr/local/bin directory
 
-###Team
+###Authors
 Hugo Curado(1), Margarida Cândido(1), Mickael Silva(2), João André Carriço(2) e Francisco M. Couto(1)
 
 (1) LaSIGE, Departamento de Informática, Faculdade de Ciências, Universidade de Lisboa, Lisboa, Portugal
 
 (2) Instituto de Microbiologia, Instituto de Medicina Molecular, Faculdade de Medicina, Universidade de Lisboa, Lisboa, Portugal
+
+###License
+This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/4.0/.
