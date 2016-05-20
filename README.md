@@ -1,4 +1,4 @@
-# AVT
+# AVT - Allele Validation Tool (AVT) for whole genome Multilocus Sequence Typing (wgMLST) schemas
 AVT (Allele Validation Tool), is a tool capable of validate novel alleles found in de novo assemblers by allele calling algorithms.
 
 AVT's website: http://hfsvbc.github.io/AVT/
