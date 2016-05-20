@@ -7,7 +7,7 @@ AVT website: http://hfsvbc.github.io/AVT/
 Simply downaload a zip of the repository and install all of AVT's <a name="SR"></a>dependencies.
 <https://github.com/HFSVBC/AVT/archive/master.zip>
 
-###[System Requirements](#SR)
+###System Requirements
 ###Team
 Hugo Curado(1), Margarida Cândido(1), Mickael Silva(2), João André Carriço(2) e Francisco M. Couto(1)
 
