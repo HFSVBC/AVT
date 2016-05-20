@@ -4,8 +4,7 @@ AVT (Allele Validation Tool), is a tool capable of validate novel alleles found 
 AVT's website: http://hfsvbc.github.io/AVT/
 
 ###Install
-Simply downaload a zip of the repository and install all of AVT's <a name="SR"></a>dependencies.
-<https://github.com/HFSVBC/AVT/archive/master.zip>
+Simply downaload a [zip of the repository](https://github.com/HFSVBC/AVT/archive/master.zip) and install all of AVT's <a name="SR"></a>dependencies.
 
 ###How to Use
 For single ended reads
@@ -28,6 +27,11 @@ For the help menu
 python AVT.py -h
 ```
 ###System Requirements
+- UNIX based system
+- [BWA](http://bio-bwa.sourceforge.net) installed in the /usr/local/bin directory
+- [SAMTOOLS](http://samtools.sourceforge.net) installed in the /usr/local/bin directory
+- [BCFTOOLS](http://www.htslib.org/download/) installed in the /usr/local/bin directory
+
 ###Team
 Hugo Curado(1), Margarida Cândido(1), Mickael Silva(2), João André Carriço(2) e Francisco M. Couto(1)
 
