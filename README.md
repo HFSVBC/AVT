@@ -8,6 +8,21 @@ The tool needs four / five inputs. A txt file with all the inf and references (e
 python AVT.py AlleleCallresults.txt ContigLocation.txt 10_S10_L001.fasta 10_S10_L001_R1_001.fastq -R2 10_S10_L001_R2_001.fastq -d True
 ```
 
+**Example of Output File**
+```
+#CHROM	POS	ID	REF	ALT	ERROR_PERCENTAGE(ALT_is_Wrong)
+gi_407930685_ref_NC_018706.1_:c230209-229088.fasta	1430	.	G	T	3.15573117368e-21
+gi_407930685_ref_NC_018706.1_:c230209-229088.fasta	1208	.	G	A	7.92683831666e-16
+gi_384141246_ref_NC_017171.1_:2598773-2599849.fasta	58	.	C	A	3.97283016734e-16
+gi_407930685_ref_NC_018706.1_:c230209-229088.fasta	1211	.	T	A	1.25631920858e-17
+gi_384141246_ref_NC_017171.1_:2598773-2599849.fasta	355	.	G	A	3.15573117368e-21
+gi_384141246_ref_NC_017171.1_:2598773-2599849.fasta	49	.	T	A	1.25631920858e-15
+gi_565636615_ref_NC_023028.1_:3720022-3722859.fasta	2120	.	T	C	3.15573117368e-21
+gi_384129960_ref_NC_017162.1_:c35008-33635.fasta	697	.	A	C	3.15573117368e-21
+gi_407930685_ref_NC_018706.1_:c230209-229088.fasta	1409	.	C	T	3.15573117368e-21
+gi_384141246_ref_NC_017171.1_:95696-96739.fasta	1297	.	G	A	3.15573117368e-21
+```
+
 AVT's website: http://hfsvbc.github.io/AVT/
 
 ###Install
