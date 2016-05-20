@@ -9,11 +9,11 @@ LaSIGE
 Allele Validation Tool (AVT) - MAIN MODULE
 
 Script capable of separating the alleles to validate from DNA sequence in fasta
-file (exemple: exemple/10_S10_L001.fasta).
-The script needs three inputs. A txt file with all the inf and references (exemple:
-exemple/AlleleCallresults.txt). A second txt file with the nodes and it's refrences
-(exemple: exemple/ContigLocation.txt). And a third file with the sequence (exemple:
-exemple/10_S10_L001.fasta). The output will be a fasta file with the bits of sequence
+file (example: example/10_S10_L001.fasta).
+The script needs three inputs. A txt file with all the inf and references (example:
+example/AlleleCallresults.txt). A second txt file with the nodes and it's refrences
+(example: example/ContigLocation.txt). And a third file with the sequence (example:
+example/10_S10_L001.fasta). The output will be a fasta file with the bits of sequence
 to analyse with the appropriate threshold.
 
 --------------------------------------------------------------------------------------------
@@ -31,7 +31,7 @@ EXECUTION METHOD:
 or
 
 ./AVT <AlleleCallresults.txt> <ContigLocation.txt> <file.fasta> <read1.fq> -R2 <read2.fq> <options>
-Exemple:
+example:
 
 """
 
@@ -144,11 +144,12 @@ if __name__ == '__main__':
     import argparse, os
     parser = argparse.ArgumentParser(description = "Allele Validation Tool (AVT) - \
 		Script capable of separating the alleles to validate from DNA sequence in fasta\
-		file (exemple: exemple/10_S10_L001.fasta).\
-		The script needs four / five inputs. A txt file with all the inf and references (exemple:\
-		exemple/AlleleCallresults.txt). A second txt file with the nodes and it's refrences\
-		(exemple: exemple/ContigLocation.txt). A third file with the sequence (exemple:\
-		exemple/10_S10_L001.fasta). And the read(s). The output will be a txt file with\
+		file (example: example/10_S10_L001.fasta).\
+		The script needs four / five inputs. A txt file with all the inf and references (example:\
+		example/AlleleCallresults.txt). A second txt file with the nodes and it's refrences\
+		(example: example/ContigLocation.txt). A third file with the sequence (example:\
+		example/10_S10_L001.fasta). And the read(s) (example: example/10_S10_L001_R1_001/\
+		and example/10_S10_L001_R2_001/). The output will be a txt file with\
 		the alleles that have not passed the validation.")
     #INPUT FILES
     #Allele_Call_results
