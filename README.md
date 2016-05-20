@@ -62,4 +62,4 @@ Hugo Curado(1), Margarida Cândido(1), Mickael Silva(2), João André Carriço(2
 (2) Instituto de Microbiologia, Instituto de Medicina Molecular, Faculdade de Medicina, Universidade de Lisboa, Lisboa, Portugal
 
 ###License
-This work is licensed under the GNU GPL V3.0 license, for more information check license.txt.
+This work is licensed under the GNU GPL V3.0 license, for more information check [license.txt](https://github.com/HFSVBC/AVT/blob/master/license.txt).
