@@ -6,6 +6,23 @@ Faculdade de Ciências
 Departamento de Informática
 LaSIGE
 
+--------------------------------------------------------------------------------------------
+This file is part of AVT.
+
+AVT is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+AVT is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with AVT.  If not, see <http://www.gnu.org/licenses/>.
+
+--------------------------------------------------------------------------------------------
 Allele Validation Tool (AVT) - MAIN MODULE
 
 Script capable of separating the alleles to validate from DNA sequence in fasta
@@ -20,7 +37,7 @@ the alleles that have not passed the validation."
 --------------------------------------------------------------------------------------------
 SYSTEM REQUIREMENTS:
 
--UNIX based OS or Windows
+-UNIX based OS
 -BWA installed in the /usr/local/bin directory
 -SAMTOOLS installed in the /usr/local/bin directory
 -BCFTOOLS installed in the /usr/local/bin directory
@@ -37,7 +54,7 @@ example:
 """
 
 __author__ = "Hugo Filipe Curado, Margarida Cândido"
-__copyright__ = ""
+__copyright__ = "GNU GPL V3.0"
 __version__ = "1.0"
 __maintainer__ = "Hugo Filipe Curado"
 __email__ = "hugofsvbc@alunos.fc.ul.pt"

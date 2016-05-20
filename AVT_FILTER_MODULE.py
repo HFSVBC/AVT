@@ -6,6 +6,23 @@ Faculdade de Ciências
 Departamento de Informática
 LaSIGE
 
+--------------------------------------------------------------------------------------------
+This file is part of AVT.
+
+AVT is free software: you can redistribute it and/or modify
+it under the terms of the GNU General Public License as published by
+the Free Software Foundation, either version 3 of the License, or
+(at your option) any later version.
+
+AVT is distributed in the hope that it will be useful,
+but WITHOUT ANY WARRANTY; without even the implied warranty of
+MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+GNU General Public License for more details.
+
+You should have received a copy of the GNU General Public License
+along with AVT.  If not, see <http://www.gnu.org/licenses/>.
+
+--------------------------------------------------------------------------------------------
 Allele Validation Tool (AVT) - FILTER MODULE
 
 Script capable of separating the alleles to validate from DNA sequence in fasta
@@ -19,7 +36,7 @@ to analyse with the appropriate threshold.
 --------------------------------------------------------------------------------------------
 SYSTEM REQUIREMENTS:
 
--UNIX based OS or Windows
+-UNIX based OS
 
 --------------------------------------------------------------------------------------------
 EXECUTION METHOD:
@@ -104,7 +121,7 @@ def NODE_grabber(ContigLocation, references_alleles):
 	for key in NODEs:
 		NODEs[key] = [NODEs[key][0], (NODEs[key][1]).split('-')]
 	for key in NODEs:
-		NODEs[key] = [NODEs[key][0], int(NODEs[key][1][0])-200, int(NODEs[key][1][1])+201] 
+		NODEs[key] = [NODEs[key][0], int(NODEs[key][1][0])-200, int(NODEs[key][1][1])+201]
 
 	return NODEs
 
@@ -162,7 +179,7 @@ def FileWriter(name, output):
 			output[ref]=out
 			fp.write('>'+ref+'\n'+str(output[ref])+'\n')
 	fp.close()
-	
+
 
 def filt(file1, file2, file3, nameOut):
 	"""
@@ -173,7 +190,6 @@ def filt(file1, file2, file3, nameOut):
 	Ensures: a file with the given name with the bits of sequence to analyse (exemple: exemple/
 	10_S10_L001_filt.fasta.
 	"""
-#29041996
 	references = reference_grabber(file1)
 	NODES = NODE_grabber(file2, references)
 	filt_seq = filt_seq_grabber(file3, NODES)
