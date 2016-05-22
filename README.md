@@ -57,9 +57,9 @@ python AVT.py -h
 ###Authors
 Hugo Curado(1), Margarida Cândido(1), Mickael Silva(2), João André Carriço(2) e Francisco M. Couto(1)
 
-(1) LaSIGE, Departamento de Informática, Faculdade de Ciências, Universidade de Lisboa, Lisboa, Portugal
+(1) [LaSIGE](http://lasige.di.fc.ul.pt), [Departamento de Informática](https://ciencias.ulisboa.pt/en/informatics), Faculdade de Ciências, Universidade de Lisboa, Lisboa, Portugal
 
-(2) Instituto de Microbiologia, Instituto de Medicina Molecular, Faculdade de Medicina, Universidade de Lisboa, Lisboa, Portugal
+(2) Instituto de Microbiologia, [Instituto de Medicina Molecular](https://imm.medicina.ulisboa.pt/pt/), Faculdade de Medicina, Universidade de Lisboa, Lisboa, Portugal
 
 ###License
 This work is licensed under the GNU GPL V3.0 license, for more information check [license.txt](https://github.com/HFSVBC/AVT/blob/master/license.txt).
