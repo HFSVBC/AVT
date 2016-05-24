@@ -6,7 +6,6 @@ Faculdade de Ciências
 Departamento de Informática
 LaSIGE
 
---------------------------------------------------------------------------------------------
 This file is part of AVT.
 
 AVT is free software: you can redistribute it and/or modify
@@ -22,7 +21,7 @@ GNU General Public License for more details.
 You should have received a copy of the GNU General Public License
 along with AVT.  If not, see <http://www.gnu.org/licenses/>.
 
---------------------------------------------------------------------------------------------
+
 Allele Validation Tool (AVT) - MAIN MODULE
 
 Script capable of separating the alleles to validate from DNA sequence in fasta
@@ -37,7 +36,7 @@ the alleles that have not passed the validation."
 --------------------------------------------------------------------------------------------
 SYSTEM REQUIREMENTS:
 
--UNIX based OS
+-UNIX based OS or Windows
 -BWA installed in the /usr/local/bin directory
 -SAMTOOLS installed in the /usr/local/bin directory
 -BCFTOOLS installed in the /usr/local/bin directory
@@ -54,7 +53,21 @@ example:
 """
 
 __author__ = "Hugo Filipe Curado, Margarida Cândido"
-__copyright__ = "GNU GPL V3.0"
+__copyright__ = """
+	This file is part of AVT.
+
+    AVT is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    AVT is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with AVT.  If not, see <http://www.gnu.org/licenses/>."""
 __version__ = "1.0"
 __maintainer__ = "Hugo Filipe Curado"
 __email__ = "hugofsvbc@alunos.fc.ul.pt"
@@ -84,7 +97,7 @@ def avtVCFdataprep(reader):
 		x = x.split('\t')
 		if x != ['']:
 			out[(x[0],x[1])]=x[2:6]
-			out[(x[0],x[1])][3]=1-(10**(-float(out[(x[0],x[1])][3])/10))
+			out[(x[0],x[1])][3]=10**(-float(out[(x[0],x[1])][3])/10)
 
 	return out
 
@@ -107,7 +120,7 @@ def avtPrintBadAlleles(badAlelles, lines, output):
 	Ensures: a txt file similar to VCF format with the all the bad calls
 	"""
 	with open(output, 'w') as fp:
-		writer = '#CHROM\tPOS\tID\tREF\tALT\tERROR_PERCENTAGE(REF_is_Wrong)\n'
+		writer = '#CHROM\tPOS\tID\tREF\tALT\tERROR_PERCENTAGE(ALT_is_Wrong)\n'
 		for line in badAlelles:
 			writer += line[0]+'\t'+line[1]+'\t'+("\t".join(str(x) for x in lines[line][0:3]))+'\t'+str(lines[line][3]*100)+'\n'
 		fp.write(writer)
