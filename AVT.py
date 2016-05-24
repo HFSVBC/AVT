@@ -193,7 +193,7 @@ if __name__ == '__main__':
                         help = 'the threshold to consider the alleles as wrong calls')
     #output
     parser.add_argument('-o, --output', metavar = 'o', dest = 'output',
-                        default = "output.csv", type = str,
+                        default = "output.txt", type = str,
                         help = 'the name of the output file')
     #delete_genData
     parser.add_argument('-d, --delete', metavar = 'd', dest = 'delete',
