@@ -84,7 +84,7 @@ def avtVCFdataprep(reader):
 		x = x.split('\t')
 		if x != ['']:
 			out[(x[0],x[1])]=x[2:6]
-			out[(x[0],x[1])][3]=10**(-float(out[(x[0],x[1])][3])/10)
+			out[(x[0],x[1])][3]=1-(10**(-float(out[(x[0],x[1])][3])/10))
 
 	return out
 
@@ -107,7 +107,7 @@ def avtPrintBadAlleles(badAlelles, lines, output):
 	Ensures: a txt file similar to VCF format with the all the bad calls
 	"""
 	with open(output, 'w') as fp:
-		writer = '#CHROM\tPOS\tID\tREF\tALT\tERROR_PERCENTAGE(ALT_is_Wrong)\n'
+		writer = '#CHROM\tPOS\tID\tREF\tALT\tERROR_PERCENTAGE(REF_is_Wrong)\n'
 		for line in badAlelles:
 			writer += line[0]+'\t'+line[1]+'\t'+("\t".join(str(x) for x in lines[line][0:3]))+'\t'+str(lines[line][3]*100)+'\n'
 		fp.write(writer)
