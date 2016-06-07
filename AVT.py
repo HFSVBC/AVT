@@ -92,6 +92,7 @@ def avtVCFdataprep(reader):
 		i+=1
 
 	reader = reader[i:]
+	
 	out = {}
 	for x in reader:
 		x = x.split('\t')
@@ -134,6 +135,8 @@ def avtVCFanalyses(threshold, output):
 	"""
 	with open(os.path.join('genData', 'aln-pe_SORTED.vcf'), 'r') as fp:
 		reader = (fp.read()).split('\n')
+		if reader[-1] == '':
+			reader = reader[:-1]
 
 	data = avtVCFdataprep(reader)
 
